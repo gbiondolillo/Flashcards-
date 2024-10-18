@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.flashcard-set {
+  text-align: center;
+}
+
+.flashcard {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px; 
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 8px;
+  overflow: hidden;
+  transform-style: preserve-3d; 
+  transition: transform 0.3s;
+}
+
+.show-answer .card-content {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  text-align: center;
+  padding: 10px;
+  backface-visibility: hidden; 
+}
+
+.card-question,
+.card-answer {
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+.card-answer {
+  transform: rotateY(180deg);
+}
